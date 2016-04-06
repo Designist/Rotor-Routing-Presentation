@@ -3,15 +3,10 @@
     <title> Rotor Routing Visualization </title>
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
-  <!-- Starts the animation when the page loads. In the future, this should be
-       replaced with a "Start Animation" button. -->
   <body>
       <!-- Most of body wrapped in "content" div for ease of CSS. -->
       <div id="interactive">
         <div id="visual">
-          <!-- Animations found in js directory. To use a different animation,
-               for example the 500x500 version, simply change the file name to
-               script src="js/500.js" or something along those lines. -->
           <canvas id="canvas" width="500px" height="500px">Your browser does not
                                                            support the HTML5
                                                            canvas tag.</canvas>
@@ -19,17 +14,21 @@
         </div>
         <div id="form">
           <form id="config_form">
+            <!-- Allows the user to choose the configuration of the visualization-->
             Choose a walk type: <br>
+            <!-- Type of walk -->
             <input type="radio" name="walk" value="0" checked>Rotor Walk<br>
             <input type="radio" name="walk" value="1">Random Walk<br><br>
             Choose an initial configuration: <br>
+            <!-- Arrow Configuration-->
             <input type="radio" name="config" value="0" checked> All North<br>
             <input type="radio" name="config" value="1"> Alternating North/South<br>
-            <!-- <input type="radio" name="config" value="2"> Alternating Directions<br> -->
             <input type="radio" name="config" value="3"> Random<br><br>
             Matrix Size: <br>
+            <!-- Matrix Size -->
             - <input type="range" name="size" min="50" max="500" value="250" step="1"> + <br><br>
             Visual Speed: <br>
+            <!-- Visualization speed -->
             - <input type="range" name="speed" min="1" max="200" value="100" step="1"> + <br><br>
           </form>
           <button onclick="init()">Start</button>
